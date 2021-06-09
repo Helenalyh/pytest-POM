@@ -1,3 +1,8 @@
+from .locator import Locator
+from selenium.webdriver.common.by import By
+from .base_element import BaseElement
+
+
 class BasePage(object):
 
     url = None

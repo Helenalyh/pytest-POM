@@ -1,11 +1,11 @@
 from pytest import mark
-from test.page_objects.training_ground_page import TrainingGooglePage
+from test.page_objects.google_page import GooglePage
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 @mark.google
 def test_training_page(chrome_driver):
-    trng_page = TrainingGooglePage(driver=chrome_driver)
+    trng_page = GooglePage(driver=chrome_driver)
     trng_page.go()
     trng_page.searchBar.input_text('cauliflower')
     trng_page.searchBar.input_text(Keys.ENTER)

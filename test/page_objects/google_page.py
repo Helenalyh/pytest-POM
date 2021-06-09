@@ -10,7 +10,7 @@ class GooglePage(BasePage):
 
 
     def goto(self,substr):
-        xpath='//h3[contains(text(),'+substr+')]'
+        xpath='//*[contains(text(),'+substr+')]'
         return self.base_element_by_xpath(xpath)
 
     def findImage(self,i):

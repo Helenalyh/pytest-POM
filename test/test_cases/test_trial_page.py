@@ -16,7 +16,7 @@ def test__wiki__page(chrome_driver):
 
 @mark.image
 def test_image_page(chrome_driver):
-    img_page = TrainingGooglePage(driver=chrome_driver)
+    img_page = GooglePage(driver=chrome_driver)
     img_page.go()
     img_page.searchBar.input_text('broccoli')
     img_page.searchBar.input_text(Keys.ENTER)
