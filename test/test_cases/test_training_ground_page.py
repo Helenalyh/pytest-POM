@@ -3,7 +3,7 @@ from test.page_objects.training_ground_page import TrainingGooglePage
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-@mark.training
+@mark.google
 def test_training_page(chrome_driver):
     trng_page = TrainingGooglePage(driver=chrome_driver)
     trng_page.go()

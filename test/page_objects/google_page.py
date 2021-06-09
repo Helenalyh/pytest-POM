@@ -8,10 +8,10 @@ class GooglePage(BasePage):
 
     url = 'http://www.google.com'
 
+
     def goto(self,substr):
-        locator = Locator(by=By.PARTIAL_LINK_TEXT,value=substr)
-        return BaseElement(driver=self.driver,
-                            locator=locator)
+        xpath='//h3[contains(text(),'+substr+')]'
+        return self.base_element_by_xpath(xpath)
 
     def findImage(self,i):
         self.imageButton.click()
@@ -21,17 +21,11 @@ class GooglePage(BasePage):
     
     @property
     def searchBar(self):
-        locator = Locator(by=By.NAME, value='q')
-        return BaseElement(
-            driver=self.driver,
-            locator=locator
-        )
+        xpath='//input[@name="q"]'
+        return self.base_element_by_xpath(xpath)
     
     @property
     def imageButton(self):
-        locator = Locator(by=By.XPATH, value='//*[@id="hdtb-msb"]/div[1]/div/div[2]/a')
-        return BaseElement(
-            driver=self.driver,
-            locator=locator
-        )
+        xpath='//a[@class="hide-focus-ring"]'
+        return self.base_element_by_xpath(xpath)
     

@@ -10,4 +10,7 @@ class BasePage(object):
 
 
     def base_element_by_xpath(self,xpath):
+        locator = Locator(by=By.XPATH,value=xpath)
+        return BaseElement(driver=self.driver,
+                            locator=locator)
         
