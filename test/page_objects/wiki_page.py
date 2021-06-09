@@ -10,4 +10,5 @@ class WikiPage(BasePage):
     @property
     def talkButton(self):
         locator = Locator(by=By.ID, value='ca-talk')
-        return BaseElement(self.driver, locator)
+        xpath='//li[@id="ca-talk"]'
+        return self.base_element_by_xpath(xpath)

@@ -8,20 +8,16 @@ class AmazonPage(BasePage):
 
     @property
     def emailInput(self):
-        locator = Locator(by=By.ID, value='ap_email')
-        return BaseElement(self.driver,locator)
+        return self.base_element_by_id('ap_email')
     
     @property
     def contiButton(self):
-        locator = Locator(by=By.ID, value='continue')
-        return BaseElement(self.driver,locator)
+        return self.base_element_by_id('continue')
     
     @property
     def pwdInput(self):
-        locator = Locator(by=By.ID, value='ap_password')
-        return BaseElement(self.driver,locator)
+        return self.base_element_by_id('ap_password')
 
     @property
     def signInButton(self):
-        locator = Locator(by=By.ID, value='signInSubmit')
-        return BaseElement(self.driver,locator)
+        return self.base_element_by_id('signInSubmit')
